@@ -1,0 +1,132 @@
+@keyframes blobMove {
+    0% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-80vw, 80vh) scale(1.2); }
+    50% { transform: translate(80vw, -80vh) scale(1); }
+    75% { transform: translate(-40vw, 40vh) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Neue Montreal', sans-serif;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    background-color: #ffffff;
+}
+
+.profile-container h1 {
+    margin: 10px 0 5px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.background-blobs {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.blob {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    border-radius: 100%;
+    filter: blur(100px);
+    animation: blobMove 25s infinite alternate ease-in-out;
+    opacity: 1;
+    mix-blend-mode: overlay;
+}
+
+.blob:nth-child(1) {
+    left: 10%;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+}
+
+.blob:nth-child(2) {
+    top: 60%;
+    left: 90%;
+    animation-delay: 3s;
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+
+.blob:nth-child(3) {
+    top: 30%;
+    left: 50%;
+    animation-delay: 6s;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 400px;
+    z-index: 2;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    font-family: 'Neue Montreal', sans-serif;
+    font-weight: 400;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-transform: capitalize
+    ;
+}
