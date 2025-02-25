@@ -24,7 +24,6 @@ body {
 
 .card {
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
     padding: 40px 20px;
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -32,13 +31,12 @@ body {
     flex-direction: column;
     align-items: center;
     z-index: 2;
-    max-width: 90%;
 }
 
 /* Responsive Design for Small Screens */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .card {
-        padding: 30px 15px;
+        padding: 60px 30px;
         border-radius: 30px;
     }
 
@@ -71,13 +69,12 @@ body {
 }
 
 .profile-container h1 {
-    margin: 10px 0 5px;
+    margin: 20px 0 5px;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
     position: relative;
-    color: #ffffff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: #000000;
 }
 
 .background-blobs {
@@ -91,31 +88,31 @@ body {
 .blob {
     position: absolute;
     width: 600px;
-    height: 300px;
+    height: 600px;
     border-radius: 100%;
     filter: blur(100px);
-    animation: blobMove 25s infinite alternate ease-in-out;
+    animation: blobMove 15s infinite alternate ease-in-out;
     opacity: 1;
     mix-blend-mode: overlay;
 }
 
 .blob:nth-child(1) {
-    left: 10%;
-    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    left: -10%;
+    background: linear-gradient(135deg, #26A69A, #26A69A);
 }
 
 .blob:nth-child(2) {
-    top: 60%;
-    left: 90%;
+    top: 40%;
+    left: 10%;
     animation-delay: 3s;
-    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    background: linear-gradient(135deg, #FFCD83, #FFCD83);
 }
 
 .blob:nth-child(3) {
-    top: 30%;
+    top: 10%;
     left: 50%;
     animation-delay: 6s;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    background: linear-gradient(135deg, #284587, #284587);
 }
 
 .button-container {
