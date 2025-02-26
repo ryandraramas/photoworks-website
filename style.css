@@ -87,8 +87,8 @@ body {
 
 .blob {
     position: absolute;
-    width: 600px;
-    height: 600px;
+    width: 800px;
+    height: 800px;
     border-radius: 100%;
     filter: blur(100px);
     animation: blobMove 15s infinite alternate ease-in-out;
@@ -98,7 +98,7 @@ body {
 
 .blob:nth-child(1) {
     left: -10%;
-    background: linear-gradient(135deg, #26A69A, #26A69A);
+    background: linear-gradient(135deg, #1bffe8, #26A69A);
 }
 
 .blob:nth-child(2) {
