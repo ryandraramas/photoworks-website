@@ -6,11 +6,10 @@
     100% { transform: translate(0, 0) scale(1); }
 }
 
-@keyframes jiggle {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-3px); }
-    50% { transform: translateX(3px); }
-    75% { transform: translateX(-3px); }
+@keyframes glowRotate {
+    0% { box-shadow: 0 0 10px #26A69A; transform: rotate(0deg); }
+    50% { box-shadow: 0 0 20px #26A69A; transform: rotate(180deg); }
+    100% { box-shadow: 0 0 10px #26A69A; transform: rotate(360deg); }
 }
 
 body {
@@ -139,6 +138,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.button1 {
+    /* animation: glowRotate 2s infinite linear; */
 }
 
 button {
